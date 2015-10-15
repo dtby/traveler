@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">traveler</string>
+
+    <!--icon-->
+    <string name="icon_list">列表</string>
+    <string name="icon_eye">发现</string>
+    <string name="icon_collect">收藏</string>
+    <string name="icon_me">我的</string>
+    <!--icon-->
+</resources>
