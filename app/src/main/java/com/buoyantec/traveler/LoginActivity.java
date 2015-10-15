@@ -29,13 +29,11 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
-import static com.buoyantec.traveler.R.id.id_toolbar;
 
 /**
  * A login screen that offers login via email/password.
@@ -70,9 +68,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // set up the toolbar
-        Toolbar toolbar = (Toolbar) findViewById(id_toolbar);
-
         // Set up the login form.
         mPhoneView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -89,12 +84,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+        //TODO forget password
+
+        Button mPhoneSignInButton = (Button) findViewById(R.id.phone_sign_in_button);
+        mPhoneSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 //attemptLogin();
-                startActivity(new Intent (LoginActivity.this, MainActivity.class) );
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
             }
         });
 

@@ -11,4 +11,9 @@
     <!--login background-->
     <color name="loginBackground">#03a0e7</color>
 
+    <color name="loginButton">#81d5fa</color>
+    <color name="forgetPassword">#026898</color>
+    <!--white color-->
+    <color name="colorWhite">#ffffff</color>
+
 </resources>
