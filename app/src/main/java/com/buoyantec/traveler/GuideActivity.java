@@ -3,20 +3,16 @@ package com.buoyantec.traveler;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
-import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
-import com.daimajia.slider.library.Tricks.ViewPagerEx;
 
 
 public class GuideActivity extends Activity {
 
     private SliderLayout sliderShow;
-    private PagerIndicator indicator;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +20,14 @@ public class GuideActivity extends Activity {
         setContentView(R.layout.activity_guide);
 
         initSlider();
+
+        Button startBtn = (Button) findViewById(R.id.start_button);
+        startBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(GuideActivity.this, LoginActivity.class) );
+            }
+        });
     }
 
     private void initSlider(){
@@ -57,28 +61,6 @@ public class GuideActivity extends Activity {
 
         sliderShow.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         sliderShow.setDuration(3000);
-        sliderShow.addOnPageChangeListener(new ViewPagerEx.OnPageChangeListener(){
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                if(position == 4){
-                    new Handler().postDelayed(new Runnable() {
-                        public void run() {
-                            startActivity(new Intent(GuideActivity.this, LoginActivity.class));
-                        }
-                    }, 2000);
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        } );
 
     }
 }

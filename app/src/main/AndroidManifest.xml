@@ -25,7 +25,7 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
-        <activity android:name=".GuideActivity">
+        <activity android:name=".GuideActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
