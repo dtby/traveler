@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <!--action bar-->
+    <color name="colorPrimary">#03a0e7</color>
+    <!--status bar-->
+    <color name="colorPrimaryDark">#03a0e7</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBottomTabDark">#262626</color>
     <color name="colorBottomTabBlue">#4fc3f7</color>
     <color name="tab_text">#FFFFFF</color>
+    <!--login background-->
+    <color name="loginBackground">#03a0e7</color>
+
 </resources>
